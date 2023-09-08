@@ -1,98 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      .banner {
+        height: 60vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("../assets/alone.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+    <title>Navigation</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <style>
-    .banner {
-      height: 60vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/alone.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
-  <title>Navigation</title>
-</head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          <span>Bootstrap</span>
+        </a>
 
-<body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
-          class="d-inline-block align-text-top" />
-        <span>Bootstrap</span>
-      </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown mx-2">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- end of navbar -->
+    </nav>
+    <!-- end of navbar -->
 
-  <section id="jumbotron">
-    <div class="container-fluid banner">
-      <div class="container d-flex flex-column justify-content-center align-items-center col-6" style="height: 60vh;">
-        <span class="text-light text-center fs-1">Welcome to my website</span>
-        <p class="text-light text-center mt-3 small d-none d-md-block">Lorem ipsum, dolor sit amet consectetur
-          adipisicing
-          elit. Quia sit
-          eaque
-          assumenda illum
-          provident
-          doloremque
-          soluta est, sunt explicabo incidunt.</p>
+    <!-- banner -->
+    <section id="jumbotron">
+      <div class="container-fluid banner">
+        <div
+          class="container d-flex flex-column justify-content-center align-items-center col-6"
+          style="height: 60vh"
+        >
+          <span class="text-light text-center fs-1">Welcome to my website</span>
+          <p class="text-light text-center mt-3 small d-none d-md-block">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia sit
+            eaque assumenda illum provident doloremque soluta est, sunt
+            explicabo incidunt.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- end of banner -->
 
-  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-</body>
+    <!-- main/accordion -->
+    <section id="accordion">
+      <div class="container my-5 col-6">
+        <h2 class="text-center mb-5">Website Testing</h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Belajar HTML
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Belajar CSS
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Belajar Javascript
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Belajar Vue.Js
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of main/accordion -->
 
+    <script
+      src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
