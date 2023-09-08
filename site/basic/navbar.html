@@ -140,7 +140,20 @@
                         the
                         card's
                         content.</p>
-                      <a href="#gallery" class="btn btn-primary">Go somewhere</a>
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Go somewhere
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
+                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -154,7 +167,20 @@
                         the
                         card's
                         content.</p>
-                      <a href="#gallery" class="btn btn-primary">Go somewhere</a>
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Go somewhere
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
+                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -168,7 +194,20 @@
                         the
                         card's
                         content.</p>
-                      <a href="#gallery" class="btn btn-primary">Go somewhere</a>
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Go somewhere
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
+                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -182,7 +221,20 @@
                         the
                         card's
                         content.</p>
-                      <a href="#gallery" class="btn btn-primary">Go somewhere</a>
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Go somewhere
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
+                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -196,7 +248,20 @@
                         the
                         card's
                         content.</p>
-                      <a href="#gallery" class="btn btn-primary">Go somewhere</a>
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Go somewhere
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
+                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -210,7 +275,20 @@
                         the
                         card's
                         content.</p>
-                      <a href="#gallery" class="btn btn-primary">Go somewhere</a>
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Go somewhere
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
+                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -227,7 +305,14 @@
   <section id="table">
     <div class="container-fluid py-5">
       <div class="container">
-        <h2 class="text-center mb-5">This is table</h2>
+        <h2 class="text-center mb-5">
+          This is table
+          <a tabindex="0" class="btn btn-light" role="button" data-bs-container="body" data-bs-toggle="popover"
+            data-bs-trigger="focus" data-bs-placement="top" data-bs-title="Dismissible popover"
+            data-bs-content="Top popover">
+            ?
+          </a>
+        </h2>
         <div class="table-responsive">
           <table class="table table-hover">
             <thead>
@@ -461,6 +546,10 @@
   <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+  </script>
 </body>
 
 </html>
