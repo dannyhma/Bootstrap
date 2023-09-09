@@ -90,11 +90,63 @@
           eaque assumenda illum provident doloremque soluta est, sunt
           explicabo incidunt.
         </p>
-        <a href="#carousel">
-          <button type="submit" class="btn btn-outline-light m-3">
-            Search
+        <a href="#">
+          <button type="submit" class="btn btn-outline-light m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Tentang
           </button>
         </a>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <form>
+              <div class="alert alert-success  alert-dismissible mb-4" id="myAlert">
+                <i class="bi bi-check2-square"></i>
+                Formulir berhasil dikirim
+                <a href="#form" class="alert-link">klik disini</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama">
+              </div>
+              <div class="mb-3">
+                <label for="hp" class="form-label">Handphone</label>
+                <input type="number" class="form-control" id="hp">
+              </div>
+              <div class="mb-3">
+                <label for="tanggal" class="form-label">Tanggal</label>
+                <input type="date" class="form-control" id="tanggal">
+              </div>
+              <div class="mb-3">
+                <label for="jam" class="form-label">Jam</label>
+                <input type="time" class="form-control" id="jam">
+              </div>
+              <div class="mb-3">
+                <label for="jumlah" class="form-label">Jumlah</label>
+                <input type="number" class="form-control" id="jumlah">
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger col-2" data-bs-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-primary col-2" id="btnSend" onclick="saveForm()">Kirim</button>
+
+            <button id="btnLoading" class="btn btn-primary disabled col-2" type="button" title="button">
+              <div class="spinner-border spinner-border-sm" role="status"></div>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -665,6 +717,7 @@
         endProcess(); myFunction()
       }, 2000);
     }
+
   </script>
 </body>
 
