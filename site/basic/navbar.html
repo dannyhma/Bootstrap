@@ -109,12 +109,13 @@
 
           <div class="modal-body">
             <form>
-              <div class="alert alert-success  alert-dismissible mb-4" id="myAlert">
+              <div class="alert alert-success  alert-dismissible mb-4" id="myAlertModal">
                 <i class="bi bi-check2-square"></i>
                 Formulir berhasil dikirim
                 <a href="#form" class="alert-link">klik disini</a>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
+
               <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="nama">
@@ -140,9 +141,10 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-danger col-2" data-bs-dismiss="modal">Tutup</button>
-            <button type="button" class="btn btn-primary col-2" id="btnSend" onclick="saveForm()">Kirim</button>
+            <button type="button" id="btnSendModal" onclick="saveFormModal()"
+              class="btn btn-primary col-2">Kirim</button>
 
-            <button id="btnLoading" class="btn btn-primary disabled col-2" type="button" title="button">
+            <button id="btnLoadingModal" class="btn btn-primary disabled col-2" type="button" title="button">
               <div class="spinner-border spinner-border-sm" role="status"></div>
             </button>
           </div>
@@ -715,6 +717,36 @@
       startProcess();
       setTimeout(function () {
         endProcess(); myFunction()
+      }, 2000);
+    }
+
+    var myAlertModal = document.getElementById('myAlertModal');
+
+    myAlertModal.style.display = 'none';
+
+    function myFunctionModal() {
+      myAlertModal.style.display = 'block';
+    }
+
+    var btnSendModal = document.getElementById('btnSendModal');
+    var btnLoadingModal = document.getElementById('btnLoadingModal');
+
+    btnLoadingModal.style.display = 'none';
+
+    function startProcessModal() {
+      btnSendModal.style.display = 'none';
+      btnLoadingModal.style.display = 'block';
+    }
+
+    function endProcessModal() {
+      btnLoadingModal.style.display = 'none';
+      btnSendModal.style.display = 'block';
+    }
+
+    function saveFormModal() {
+      startProcessModal();
+      setTimeout(function () {
+        endProcessModal(); myFunctionModal()
       }, 2000);
     }
 
