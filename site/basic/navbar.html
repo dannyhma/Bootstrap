@@ -616,7 +616,11 @@
             </div>
 
             <div class="mb-3">
-              <button class="btn btn-primary w-100" type="button" onclick="myFunction()">Kirim</button>
+              <button id="btnSend" onclick="saveForm()" class="btn btn-primary w-100" type="button">Kirim </button>
+
+              <button id="btnLoading" class="btn btn-primary w-100 mt-2 disabled" type="button" title="button">
+                <div class="spinner-border spinner-border-sm" role="status"></div>
+              </button>
             </div>
           </form>
         </div>
@@ -638,6 +642,28 @@
 
     function myFunction() {
       myAlert.style.display = 'block';
+    }
+
+    var btnSend = document.getElementById('btnSend');
+    var btnLoading = document.getElementById('btnLoading');
+
+    btnLoading.style.display = 'none';
+
+    function startProcess() {
+      btnSend.style.display = 'none';
+      btnLoading.style.display = 'block';
+    }
+
+    function endProcess() {
+      btnLoading.style.display = 'none';
+      btnSend.style.display = 'block';
+    }
+
+    function saveForm() {
+      startProcess();
+      setTimeout(function () {
+        endProcess(); myFunction()
+      }, 2000);
     }
   </script>
 </body>
