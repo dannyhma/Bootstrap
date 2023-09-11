@@ -1,756 +1,1134 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <style>
+      .banner {
+        height: 60vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("../assets/alone.jpg");
+        background-size: cover;
+        background-position: center;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <style>
-    .banner {
-      height: 60vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../assets/alone.jpg");
-      background-size: cover;
-      background-position: center;
-    }
+      .bordered {
+        border: solid 1px;
+      }
+    </style>
+    <title>Navigation</title>
+  </head>
 
-    .bordered {
-      border: solid 1px;
-    }
-  </style>
-  <title>Navigation</title>
-</head>
-
-<body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
-          class="d-inline-block align-text-top" />
-        <span>Bootstrap</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown mx-2">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <!-- end of navbar -->
-
-  <!-- banner -->
-  <section id="jumbotron">
-    <div class="container-fluid banner">
-      <div class="container d-flex flex-column justify-content-center align-items-center col-6" style="height: 60vh">
-        <span class="text-light text-center fs-1">Welcome to my website</span>
-        <p class="text-light text-center mt-3 small d-none d-md-block">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia sit
-          eaque assumenda illum provident doloremque soluta est, sunt
-          explicabo incidunt.
-        </p>
-        <a href="#">
-          <button type="submit" class="btn btn-outline-light m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Tentang
-          </button>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          <span>Bootstrap</span>
         </a>
-      </div>
-    </div>
 
-    <!-- modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div class="modal-body">
-            <form>
-              <div class="alert alert-success  alert-dismissible mb-4" id="myAlertModal">
-                <i class="bi bi-check2-square"></i>
-                Formulir berhasil dikirim
-                <a href="#form" class="alert-link">klik disini</a>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
 
-              <div class="mb-3">
-                <label for="name" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="nama">
-              </div>
-              <div class="mb-3">
-                <label for="hp" class="form-label">Handphone</label>
-                <input type="number" class="form-control" id="hp">
-              </div>
-              <div class="mb-3">
-                <label for="tanggal" class="form-label">Tanggal</label>
-                <input type="date" class="form-control" id="tanggal">
-              </div>
-              <div class="mb-3">
-                <label for="jam" class="form-label">Jam</label>
-                <input type="time" class="form-control" id="jam">
-              </div>
-              <div class="mb-3">
-                <label for="jumlah" class="form-label">Jumlah</label>
-                <input type="number" class="form-control" id="jumlah">
-              </div>
-            </form>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger col-2" data-bs-dismiss="modal">Tutup</button>
-            <button type="button" id="btnSendModal" onclick="saveFormModal()"
-              class="btn btn-primary col-2">Kirim</button>
-
-            <button id="btnLoadingModal" class="btn btn-primary disabled col-2" type="button" title="button">
-              <div class="spinner-border spinner-border-sm" role="status"></div>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of banner -->
-
-  <!-- gallery card -->
-  <section id="gallery">
-    <div class="container-fluid py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Gallery card</h2>
-
-        <div class="col-12">
-          <div class="row">
-            <div class="col-lg-3 col-md-3 mb-4">
-              <div class="list-group list-group-flush">
-                <a href="#gallery" class="list-group-item d-flex justify-content-between align-items-center">
-                  The current link item
-                  <span class="badge bg-primary rounded-pill">17</span>
-                </a>
-                <a href="#gallery" class="list-group-item d-flex justify-content-between align-items-center">A second
-                  link item <span class="badge bg-primary rounded-pill">5</span>
-                </a>
-                <a href="#gallery" class="list-group-item d-flex justify-content-between align-items-center">A third
-                  link item <span class="badge bg-primary rounded-pill">4</span>
-                </a>
-                <a href="#gallery" class="list-group-item d-flex justify-content-between align-items-center">A fourth
-                  link item <span class="badge bg-primary rounded-pill">14</span>
-                </a>
-                <a href="#gallery" class="list-group-item d-flex justify-content-between align-items-center">A
-                  disabled
-                  link item <span class="badge bg-primary rounded-pill">10</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-9 col-md-9">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                  <div class="card">
-                    <img src="../assets/c1.jpg" class="card-img-top" alt="image-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's
-                        content.</p>
-                      <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Go somewhere
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
-                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                  <div class="card">
-                    <img src="../assets/c2.jpg" class="card-img-top" alt="image-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's
-                        content.</p>
-                      <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Go somewhere
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
-                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                  <div class="card">
-                    <img src="../assets/c3.jpg" class="card-img-top" alt="image-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's
-                        content.</p>
-                      <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Go somewhere
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
-                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                  <div class="card">
-                    <img src="../assets/c4.jpg" class="card-img-top" alt="image-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's
-                        content.</p>
-                      <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Go somewhere
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
-                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                  <div class="card">
-                    <img src="../assets/c5.jpg" class="card-img-top" alt="image-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's
-                        content.</p>
-                      <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Go somewhere
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
-                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                  <div class="card">
-                    <img src="../assets/c6.jpg" class="card-img-top" alt="image-1">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's
-                        content.</p>
-                      <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Go somewhere
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#gallery">Action</a></li>
-                          <li>
-                            <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="#gallery">Another action</a></li>
-                          <li><a class="dropdown-item" href="#gallery">Something else here</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of gallery card -->
-
-  <!-- table -->
-  <section id="table">
-    <div class="container-fluid py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">
-          This is table
-          <a tabindex="0" class="btn btn-light" role="button" data-bs-container="body" data-bs-toggle="popover"
-            data-bs-trigger="focus" data-bs-placement="top" data-bs-title="Dismissible popover"
-            data-bs-content="Top popover">
-            ?
-          </a>
-        </h2>
-        <div class="table-responsive">
-          <table class="table table-hover">
-            <thead>
-              <tr class="table-secondary">
-                <th scope="col">No</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Address</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>XXXX</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>XXXX</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>XXXX</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of table -->
-
-  <!-- main/accordion -->
-  <section id="accordion">
-    <div class="container my-5 col-lg-6 col-md-8 col-sm-9 col-10">
-      <h2 class="text-center mb-5">Website Testing</h2>
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Belajar HTML
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nemo, neque?
-              </strong>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-              optio quibusdam doloremque id velit consequuntur in corporis,
-              obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
-              sapiente, mollitia placeat magnam. Dolorum!
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Belajar CSS
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nemo, neque?
-              </strong>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-              optio quibusdam doloremque id velit consequuntur in corporis,
-              obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
-              sapiente, mollitia placeat magnam. Dolorum!
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Belajar Javascript
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nemo, neque?
-              </strong>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-              optio quibusdam doloremque id velit consequuntur in corporis,
-              obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
-              sapiente, mollitia placeat magnam. Dolorum!
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Belajar Vue.Js
-            </button>
-          </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nemo, neque?
-              </strong>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-              optio quibusdam doloremque id velit consequuntur in corporis,
-              obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
-              sapiente, mollitia placeat magnam. Dolorum!
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of main/accordion -->
-
-  <!-- carousel slider -->
-  <section id="carousel">
-    <div class="container-fluid bg-dark py-5">
-      <div class="container">
-        <h2 class="text-light text-center mb-5">Carousel slider </h2>
-        <div id="carouselExampleCaptions" class="carousel slide col-lg-8 offset-lg-2" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../assets/w1.jpg" class="d-block w-100" alt="w1-image" />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/w2.jpg" class="d-block w-100" alt="w2-image" />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second
-                  slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="../assets/w3.jpg" class="d-block w-100" alt="w3-image" />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of carousel slider -->
-
-  <!-- fluid image -->
-  <section id="fluid">
-    <div class="container-fluid py-5">
-      <div class="container">
-        <h2 class="text-center">Fluid Image</h2>
-        <div class="col-lg-6 col-md-8 col-sm-9 col-10 mt-5 d-block mx-auto">
-          <img src="../assets/sky.jpg" alt="sky-image" class="img-fluid img-thumbnail">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of fluid image -->
-
-  <!-- blockquote -->
-  <section id="blockquote">
-    <div class="container-fluid py-5 bg-light text-dark">
-      <div class="container">
-        <h2 class="text-center mb-5">What is that?</h2>
-        <div class="col-12">
-          <figure class="text-center">
-            <blockquote class="blockquote">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis impedit ipsum ipsa illo corporis
-                distinctio repudiandae assumenda atque magnam cupiditate.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">Someone famous in<cite title="Source Tittle"> Source Tittle</cite>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end of blockquote -->
-
-  <!-- form -->
-  <section id="form">
-    <div class="container-fluid py-5 bg-dark text-white">
-      <div class="container">
-        <h2 class="text-center mb-4">
-          Hubungi kami
-        </h2>
-
-        <div class="col-lg-8 offset-lg-2">
-          <div class="alert alert-success  alert-dismissible mb-4" id="myAlert">
-            <i class="bi bi-check2-square"></i>
-            Formulir berhasil dikirim
-            <a href="#form" class="alert-link">klik disini</a>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-
-          <form>
-            <div class="mb-3">
-              <div class="row">
-                <div class="col-lg-6">
-                  <label for="namaDepan" class="form-label">Nama Depan</label>
-                  <input type="text" id="namaDepan" autocomplete="off" class="form-control">
-                </div>
-                <div class="col-lg-6">
-                  <label for="namaBelakang" class="form-label">Nama Belakang</label>
-                  <input type="text" id="namaBelakang" autocomplete="off" class="form-control">
-                </div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="username">Username</label>
-              <div class="input-group">
-                <span class="input-group-text">@</span>
-                <input type="text" id="username" class="form-control">
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <div class="input-group">
-                <input type="email" id="email" autocomplete="off" class="form-control">
-                <span class="input-group-text">@gmail.com</span>
-              </div>
-
-              <label class="form-text">*email anda tidak akan disebarluaskan</label>
-            </div>
-
-            <div class="mb-3">
-              <label for="tingkatUrgensi" class="form-label">Tingkat Urgensi</label>
-              <select class="form-select" id="tingkatUrgensi">
-                <option value="penting">Penting</option>
-                <option value="normal">Normal</option>
-                <option value="tidakPenting">Tidak Penting</option>
-              </select>
-            </div>
-
-            <div class="mb-3 form-check">
-              <input type="radio" id="komplain" name="kategori" class="form-check-input">
-              <label for="komplain" class="form-check-label">Komplain</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input type="radio" id="saran" name="kategori" class="form-check-input">
-              <label for="saran" class="form-check-label">Saran</label>
-            </div>
-
-            <div class="mb-3">
-              <label for="deskripsi" class="form-label">Deskripsi</label>
-              <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" class="form-control"></textarea>
-            </div>
-
-            <div class="mb-3">
-              <button id="btnSend" onclick="saveForm()" class="btn btn-primary w-100" type="button">Kirim </button>
-
-              <button id="btnLoading" class="btn btn-primary w-100 mt-2 disabled" type="button" title="button">
-                <div class="spinner-border spinner-border-sm" role="status"></div>
-              </button>
-            </div>
           </form>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- end of form -->
+    </nav>
+    <!-- end of navbar -->
 
-  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script>
-    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    <!-- banner -->
+    <section id="jumbotron">
+      <div class="container-fluid banner">
+        <div
+          class="container d-flex flex-column justify-content-center align-items-center col-6"
+          style="height: 60vh"
+        >
+          <span class="text-light text-center fs-1">Welcome to my website</span>
+          <p class="text-light text-center mt-3 small d-none d-md-block">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia sit
+            eaque assumenda illum provident doloremque soluta est, sunt
+            explicabo incidunt.
+          </p>
+          <a href="#">
+            <button
+              type="submit"
+              class="btn btn-outline-light m-3"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Tentang
+            </button>
+          </a>
+        </div>
+      </div>
 
-    var myAlert = document.getElementById('myAlert');
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
 
-    myAlert.style.display = 'none';
+            <div class="modal-body">
+              <form>
+                <div
+                  class="alert alert-success alert-dismissible mb-4"
+                  id="myAlertModal"
+                >
+                  <i class="bi bi-check2-square"></i>
+                  Formulir berhasil dikirim
+                  <a href="#form" class="alert-link">klik disini</a>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                  ></button>
+                </div>
 
-    function myFunction() {
-      myAlert.style.display = 'block';
-    }
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="nama" />
+                </div>
+                <div class="mb-3">
+                  <label for="hp" class="form-label">Handphone</label>
+                  <input type="number" class="form-control" id="hp" />
+                </div>
+                <div class="mb-3">
+                  <label for="tanggal" class="form-label">Tanggal</label>
+                  <input type="date" class="form-control" id="tanggal" />
+                </div>
+                <div class="mb-3">
+                  <label for="jam" class="form-label">Jam</label>
+                  <input type="time" class="form-control" id="jam" />
+                </div>
+                <div class="mb-3">
+                  <label for="jumlah" class="form-label">Jumlah</label>
+                  <input type="number" class="form-control" id="jumlah" />
+                </div>
+              </form>
+            </div>
 
-    var btnSend = document.getElementById('btnSend');
-    var btnLoading = document.getElementById('btnLoading');
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger col-2"
+                data-bs-dismiss="modal"
+              >
+                Tutup
+              </button>
+              <button
+                type="button"
+                id="btnSendModal"
+                onclick="saveFormModal()"
+                class="btn btn-primary col-2"
+              >
+                Kirim
+              </button>
 
-    btnLoading.style.display = 'none';
+              <button
+                id="btnLoadingModal"
+                class="btn btn-primary disabled col-2"
+                type="button"
+                title="button"
+              >
+                <div
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                ></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of banner -->
 
-    function startProcess() {
-      btnSend.style.display = 'none';
-      btnLoading.style.display = 'block';
-    }
+    <!-- gallery card -->
+    <section id="gallery">
+      <div class="container-fluid py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Gallery card</h2>
 
-    function endProcess() {
-      btnLoading.style.display = 'none';
-      btnSend.style.display = 'block';
-    }
+          <div class="col-12">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 mb-4">
+                <div class="list-group list-group-flush">
+                  <a
+                    href="#gallery"
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    The current link item
+                    <span class="badge bg-primary rounded-pill">17</span>
+                  </a>
+                  <a
+                    href="#gallery"
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                    >A second link item
+                    <span class="badge bg-primary rounded-pill">5</span>
+                  </a>
+                  <a
+                    href="#gallery"
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                    >A third link item
+                    <span class="badge bg-primary rounded-pill">4</span>
+                  </a>
+                  <a
+                    href="#gallery"
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                    >A fourth link item
+                    <span class="badge bg-primary rounded-pill">14</span>
+                  </a>
+                  <a
+                    href="#gallery"
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                    >A disabled link item
+                    <span class="badge bg-primary rounded-pill">10</span>
+                  </a>
+                </div>
+              </div>
 
-    function saveForm() {
-      startProcess();
-      setTimeout(function () {
-        endProcess(); myFunction()
-      }, 2000);
-    }
+              <div class="col-lg-9 col-md-9">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="card">
+                      <img
+                        src="../assets/c1.jpg"
+                        class="card-img-top"
+                        alt="image-1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Go somewhere
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-    var myAlertModal = document.getElementById('myAlertModal');
+                  <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="card">
+                      <img
+                        src="../assets/c2.jpg"
+                        class="card-img-top"
+                        alt="image-1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Go somewhere
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-    myAlertModal.style.display = 'none';
+                  <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="card">
+                      <img
+                        src="../assets/c3.jpg"
+                        class="card-img-top"
+                        alt="image-1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Go somewhere
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-    function myFunctionModal() {
-      myAlertModal.style.display = 'block';
-    }
+                  <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="card">
+                      <img
+                        src="../assets/c4.jpg"
+                        class="card-img-top"
+                        alt="image-1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Go somewhere
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-    var btnSendModal = document.getElementById('btnSendModal');
-    var btnLoadingModal = document.getElementById('btnLoadingModal');
+                  <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                    <div class="card">
+                      <img
+                        src="../assets/c5.jpg"
+                        class="card-img-top"
+                        alt="image-1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Go somewhere
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-    btnLoadingModal.style.display = 'none';
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="card">
+                      <img
+                        src="../assets/c6.jpg"
+                        class="card-img-top"
+                        alt="image-1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Go somewhere
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Action</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#gallery"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of gallery card -->
 
-    function startProcessModal() {
-      btnSendModal.style.display = 'none';
-      btnLoadingModal.style.display = 'block';
-    }
+    <!-- table -->
+    <section id="table">
+      <div class="container-fluid py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">
+            This is table
+            <a
+              tabindex="0"
+              class="btn btn-light"
+              role="button"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-placement="top"
+              data-bs-title="Dismissible popover"
+              data-bs-content="Top popover"
+            >
+              ?
+            </a>
+          </h2>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr class="table-secondary">
+                  <th scope="col">No</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                  <th scope="col">Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>XXXX</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                  <td>XXXX</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                  <td>XXXX</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of table -->
 
-    function endProcessModal() {
-      btnLoadingModal.style.display = 'none';
-      btnSendModal.style.display = 'block';
-    }
+    <!-- main/accordion -->
+    <section id="accordion">
+      <div class="container my-5 col-lg-6 col-md-8 col-sm-9 col-10">
+        <h2 class="text-center mb-5">Website Testing</h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Belajar HTML
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
 
-    function saveFormModal() {
-      startProcessModal();
-      setTimeout(function () {
-        endProcessModal(); myFunctionModal()
-      }, 2000);
-    }
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Belajar CSS
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
 
-  </script>
-</body>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Belajar Javascript
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Belajar Vue.Js
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, neque?
+                </strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                optio quibusdam doloremque id velit consequuntur in corporis,
+                obcaecati adipisci eveniet! Repellat quo numquam rem laudantium
+                sapiente, mollitia placeat magnam. Dolorum!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of main/accordion -->
+
+    <!-- carousel slider -->
+    <section id="carousel">
+      <div class="container-fluid bg-dark py-5">
+        <div class="container">
+          <h2 class="text-light text-center mb-5">Carousel slider</h2>
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide col-lg-8 offset-lg-2"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../assets/w1.jpg"
+                  class="d-block w-100"
+                  alt="w1-image"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>
+                    Some representative placeholder content for the first slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../assets/w2.jpg"
+                  class="d-block w-100"
+                  alt="w2-image"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>
+                    Some representative placeholder content for the second
+                    slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../assets/w3.jpg"
+                  class="d-block w-100"
+                  alt="w3-image"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>
+                    Some representative placeholder content for the third slide.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of carousel slider -->
+
+    <!-- fluid image -->
+    <section id="fluid">
+      <div class="container-fluid py-5">
+        <div class="container">
+          <h2 class="text-center">Fluid Image</h2>
+          <div class="col-lg-6 col-md-8 col-sm-9 col-10 mt-5 d-block mx-auto">
+            <img
+              src="../assets/sky.jpg"
+              alt="sky-image"
+              class="img-fluid img-thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of fluid image -->
+
+    <!-- blockquote -->
+    <section id="blockquote">
+      <div class="container-fluid py-5 bg-light text-dark">
+        <div class="container">
+          <h2 class="text-center mb-5">What is that?</h2>
+          <div class="col-12">
+            <figure class="text-center">
+              <blockquote class="blockquote">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis impedit ipsum ipsa illo corporis distinctio
+                  repudiandae assumenda atque magnam cupiditate.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Someone famous in<cite title="Source Tittle">
+                  Source Tittle</cite
+                >
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of blockquote -->
+
+    <!-- form -->
+    <section id="form">
+      <div class="container-fluid py-5 bg-dark text-white">
+        <div class="container">
+          <h2 class="text-center mb-4">Hubungi kami</h2>
+
+          <div class="col-lg-8 offset-lg-2">
+            <div
+              class="alert alert-success alert-dismissible mb-4"
+              id="myAlert"
+            >
+              <i class="bi bi-check2-square"></i>
+              Formulir berhasil dikirim
+              <a href="#form" class="alert-link">klik disini</a>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <form>
+              <div class="mb-3">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label for="namaDepan" class="form-label">Nama Depan</label>
+                    <input
+                      type="text"
+                      id="namaDepan"
+                      autocomplete="off"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="namaBelakang" class="form-label"
+                      >Nama Belakang</label
+                    >
+                    <input
+                      type="text"
+                      id="namaBelakang"
+                      autocomplete="off"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="username">Username</label>
+                <div class="input-group">
+                  <span class="input-group-text">@</span>
+                  <input type="text" id="username" class="form-control" />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group">
+                  <input
+                    type="email"
+                    id="email"
+                    autocomplete="off"
+                    class="form-control"
+                  />
+                  <span class="input-group-text">@gmail.com</span>
+                </div>
+
+                <label class="form-text"
+                  >*email anda tidak akan disebarluaskan</label
+                >
+              </div>
+
+              <div class="mb-3">
+                <label for="tingkatUrgensi" class="form-label"
+                  >Tingkat Urgensi</label
+                >
+                <select class="form-select" id="tingkatUrgensi">
+                  <option value="penting">Penting</option>
+                  <option value="normal">Normal</option>
+                  <option value="tidakPenting">Tidak Penting</option>
+                </select>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input
+                  type="radio"
+                  id="komplain"
+                  name="kategori"
+                  class="form-check-input"
+                />
+                <label for="komplain" class="form-check-label">Komplain</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="radio"
+                  id="saran"
+                  name="kategori"
+                  class="form-check-input"
+                />
+                <label for="saran" class="form-check-label">Saran</label>
+              </div>
+
+              <div class="mb-3">
+                <label for="deskripsi" class="form-label">Deskripsi</label>
+                <textarea
+                  name="deskripsi"
+                  id="deskripsi"
+                  cols="30"
+                  rows="10"
+                  class="form-control"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <button
+                  id="btnSend"
+                  onclick="saveForm()"
+                  class="btn btn-primary w-100"
+                  type="button"
+                >
+                  Kirim
+                </button>
+
+                <button
+                  id="btnLoading"
+                  class="btn btn-primary w-100 mt-2 disabled"
+                  type="button"
+                  title="button"
+                >
+                  <div
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                  ></div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of form -->
+
+    <script
+      src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+      );
+
+      var myAlert = document.getElementById("myAlert");
+
+      myAlert.style.display = "none";
+
+      function myFunction() {
+        myAlert.style.display = "block";
+      }
+
+      var btnSend = document.getElementById("btnSend");
+      var btnLoading = document.getElementById("btnLoading");
+
+      btnLoading.style.display = "none";
+
+      function startProcess() {
+        btnSend.style.display = "none";
+        btnLoading.style.display = "block";
+      }
+
+      function endProcess() {
+        btnLoading.style.display = "none";
+        btnSend.style.display = "block";
+      }
+
+      function saveForm() {
+        startProcess();
+        setTimeout(function () {
+          endProcess();
+          myFunction();
+        }, 2000);
+      }
+
+      var myAlertModal = document.getElementById("myAlertModal");
+
+      myAlertModal.style.display = "none";
+
+      function myFunctionModal() {
+        myAlertModal.style.display = "block";
+      }
+
+      var btnSendModal = document.getElementById("btnSendModal");
+      var btnLoadingModal = document.getElementById("btnLoadingModal");
+
+      btnLoadingModal.style.display = "none";
+
+      function startProcessModal() {
+        btnSendModal.style.display = "none";
+        btnLoadingModal.style.display = "block";
+      }
+
+      function endProcessModal() {
+        btnLoadingModal.style.display = "none";
+        btnSendModal.style.display = "block";
+      }
+
+      function saveFormModal() {
+        startProcessModal();
+        setTimeout(function () {
+          endProcessModal();
+          myFunctionModal();
+        }, 2000);
+      }
+    </script>
+  </body>
 </html>
